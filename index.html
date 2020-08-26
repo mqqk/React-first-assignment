@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Here you can find Sally contact information">
     <title>Sally contact</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -16,10 +16,7 @@
 </header>
 
 <main>
-    <section id="introduction">
-        <p>Hi I'm Sally I'm 25 and below this line you'll find more information about me.</p>
-    </section>
-    <br>
+    <section id="introduction"></section>
     <section id="Education">
         <p>I have studied at:</p>
         <ul>
@@ -64,18 +61,21 @@
 
    
 <script type="text/babel">
-	function App(props){
-	console.log(props)
-	return(
-	<header>{props.children}</header>);};
-	
-	//const test={className:'new-class-name'};
+	// example function App(props){console.log(props) return(<header>{props.children}</header>);};
+
+    function App(heading){
+        console.log('running');
+        
+    }
 	
 	ReactDOM.render(
-	<App className='my-class'>
-		<h1>Current Page Title</h1>
+	<App id='top-header'>
+		<h1>Sally's Resume</h1>
+        <p>Hi I'm Sally I'm 25 and below this line you'll find more information about me.</p>   
 	</App>,
-	document.querySelector('#application-root'));
+	document.querySelector('#introduction'));
+
+    //ReactDom.render();
   //ReactDOM.render(element=<div></div>,containter=line 29)
   // Without JSX React.createElement('div', null, [React.createElement('h1', null, 'Hello, world!'),React.createElement('p', null, 'How are you today?'),React.createElement('h2', null, 'Look what react can do!')])
 </script>
